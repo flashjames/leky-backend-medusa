@@ -1,5 +1,21 @@
+[build]
+builder = "NIXPACKS"
+
+[variables]
+TAILSCALE_VERSION = "latest"
+TAILSCALE_HOSTNAME = "railway-backend-medusa"
+TAILSCALE_ADDITIONAL_ARGS = ""
+TAILSCALE_AUTHKEY = ""
+
 [phases.setup]
 nixPkgs = ['nodejs', 'yarn']
+aptPkgs = ["wget"]   # Install the wget package with apt-get
+
+[phases.setupTailScale]
+cmds = ["wget https://pkgs.tailscale.com/stable/tailscale_latest_amd64.tgz", "tar xzf tailscale_latest_amd64.tgz --strip-components=1", "mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale"]
 
 [phases.install]
 cmds=['yarn install']
+
+[start]
+cmd = "./start.sh"

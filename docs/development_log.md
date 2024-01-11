@@ -232,3 +232,15 @@ each time something updates inside refetch, it gonna trigger a whole rerun of th
 ## jan 10 first session
 disable cache in firefox developer tools, since I have a feeling some of the requests that are responsible for getting "access" to the backend, doesnt run when some parts of the page is cached.
 [Probably OPTIONS requests, dont get run]
+
+# next task tomorrow:
+- continue getting medusa-backend to start on railway
+
+
+## Session 1 - jan 11
+Fortsätt få tailscale att funka under mitt railway projekt,
+så jag kan testa om jag kan komma åt docker(nixpack) containern
+så jag kan starta den lokalt
+
+## Session 2
+Fixa så backend-medusa (nixpacks.toml) bygger in tailscale + tailscale ssh, samt startar det.
