@@ -244,3 +244,26 @@ så jag kan starta den lokalt
 
 ## Session 2
 Fixa så backend-medusa (nixpacks.toml) bygger in tailscale + tailscale ssh, samt startar det.
+
+
+# Next task
+- Make sure all docker caches are removed
+- Run nixpacks build ./ --name backend-medusa-v4 to start building the nixpack for backend medusa
+
+
+# Next task:
+- Add JWT_SECRET and COOKIE_SECRET to .env file run on railway
+Also save it somewhere so if I loose it, I still have it locally.
+
+- I want different .env values for my nixpack enviroment locally (docker)
+but then also for different enviroments (production & staging) on railway
+I also want a simple command locally to use production/staging enviroments (postgres and redis on each)
+
+
+- To check, does enviroment variables defined in nixpacks.toml override the copied ~/byq/backend-medusa/.env file?
+
+
+
+# In backend_medusa/nixpacks.toml
+TAILSCALE_AUTHKEY make it be set automatically with a "new/working one" (right now I need to manually "let it in through browser" with link that this docker puts up, when it's starting, i.e. it stops at initing container
+TAILSCALE_HOSTNAME be set according to which enviroment we're in
