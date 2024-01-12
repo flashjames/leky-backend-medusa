@@ -1,14 +1,12 @@
 {
-  "name": "@theflashjames/medusa-plugin-algolia",
-  "version": "0.2.12",
+  "name": "@flashjames/medusa-plugin-algolia",
+  "version": "5.2.12",
   "publishConfig": {
-  "registry": "https://npm.pkg.github.com"
-},
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Algolia search plugin for Medusa",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/flashjames/leky-backend-medusa",
-    "directory": "packages/medusa-plugin-algolia"
+    "url": "git+https://github.com/flashjames/leky-backend-medusa.git"
   },
   "files": [
     "dist"

@@ -1,8 +1,11 @@
 {
-  "name": "medusa-starter-default",
-  "version": "0.0.1",
+  "name": "@flashjames/medusa-plugin-algolia",
+  "version": "5.0.5",
   "description": "A starter for Medusa projects.",
   "author": "Medusa (https://medusajs.com)",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "keywords": [
     "sqlite",
