@@ -72,9 +72,7 @@ class ProductSearchSubscriber {
         this.productService_ = productService;
         this.pricingService_ = pricingService;
         this.eventBus_.subscribe(product_1.default.Events.CREATED, this.handleProductCreation);
-        this.eventBus_.subscribe(product_1.default.Events.UPDATED, this.handleProductCreation // SHOULD NOT BE LIKE THIS
-        //this.handleProductUpdate
-        );
+        this.eventBus_.subscribe(product_1.default.Events.UPDATED, this.handleProductUpdate);
         this.eventBus_.subscribe(product_1.default.Events.DELETED, this.handleProductDeletion);
         this.eventBus_.subscribe(product_variant_1.default.Events.CREATED, this.handleProductVariantChange);
         this.eventBus_.subscribe(product_variant_1.default.Events.UPDATED, this.handleProductVariantChange);

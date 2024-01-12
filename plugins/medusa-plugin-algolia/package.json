@@ -1,5 +1,5 @@
 {
-  "name": "medusa-plugin-algolia",
+  "name": "@theflashjames/medusa-plugin-algolia",
   "version": "0.2.12",
   "description": "Algolia search plugin for Medusa",
   "repository": {

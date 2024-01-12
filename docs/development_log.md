@@ -271,3 +271,9 @@ I also want a simple command locally to use production/staging enviroments (post
 # In backend_medusa/nixpacks.toml
 TAILSCALE_AUTHKEY make it be set automatically with a "new/working one" (right now I need to manually "let it in through browser" with link that this docker puts up, when it's starting, i.e. it stops at initing container
 TAILSCALE_HOSTNAME be set according to which enviroment we're in
+
+
+# Todo last session
+Setup private npm repository for medusa-plugin-algolia
+and fix so railway can access it see:
+https://www.answeroverflow.com/m/1119291296469762098#solution-1159874695454281831

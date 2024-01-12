@@ -32,10 +32,6 @@ cmds = ["wget https://pkgs.tailscale.com/stable/tailscale_latest_amd64.tgz", "ta
 cacheDirectories = ['node_modules/.cache']
 cmd=['yarn install']
 
-[phases.buildMedusaAlgoliaPlugin]
-cacheDirectories = ['node_modules/.cache']
-cmds=["cd /app/plugins/medusa-plugin-algolia && yarn build"]
-
 [phases.buildMedusa]
 cacheDirectories = ['node_modules/.cache']
 cmd=["yarn build"]
