@@ -262,6 +262,10 @@ I also want a simple command locally to use production/staging enviroments (post
 
 - To check, does enviroment variables defined in nixpacks.toml override the copied ~/byq/backend-medusa/.env file?
 
+# Next task after break
+- Understand why container doesnt start on railway
+(first check if I can start the docker container being built)
+
 
 
 # In backend_medusa/nixpacks.toml

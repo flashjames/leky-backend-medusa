@@ -7,9 +7,8 @@ TAILSCALE_HOSTNAME = "railway-backend-medusa"
 TAILSCALE_ADDITIONAL_ARGS = ""
 TAILSCALE_AUTHKEY = ""
 DATABASE_TYPE = "postgres"
-DATABASE_URL = "${{Postgres.DATABASE_URL}}"
-
-REDIS_URL = "{{Redis.REDIS_URL}}"
+#DATABASE_URL = "${{Postgres.DATABASE_URL}}"
+#REDIS_URL = "{{Redis.REDIS_URL}}"
 STORE_CORS = "https://leky.hr, https://byq-storefront-medusa.vercel.app, http://localhost:8000,http://localhost:7003"
 MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY = "backend-medusa-storefront" # not needed?
 MEDUSA_ADMIN_ONBOARDING_TYPE = "nextjs" # not needed?
@@ -36,5 +35,5 @@ cacheDirectories = ['node_modules/.cache']
 cmd=["yarn build"]
 
 [start]
-#cmd = "./start.sh"
+#cmd = "./start_sleep.sh"
 cmd = "./start.sh"
