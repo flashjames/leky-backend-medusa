@@ -34,7 +34,7 @@ cmd=['yarn install']
 
 [phases.buildMedusaAlgoliaPlugin]
 cacheDirectories = ['node_modules/.cache']
-cmds=["cd plugins/medusa-plugin-algolia && yarn build"]
+cmds=["cd /app/plugins/medusa-plugin-algolia && yarn build"]
 
 [phases.buildMedusa]
 cacheDirectories = ['node_modules/.cache']
