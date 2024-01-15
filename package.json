@@ -3,9 +3,6 @@
   "version": "5.0.5",
   "description": "A starter for Medusa projects.",
   "author": "Medusa (https://medusajs.com)",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "keywords": [
     "sqlite",
@@ -28,7 +25,7 @@
     "dev": "cross-env npm run build:server && medusa develop"
   },
   "dependencies": {
-    "@flashjames/medusa-plugin-algolia": "5.2.12",
+    "@flashjames/medusa-plugin-algolia": "^5.2.12",
     "@medusajs/admin": "7.1.9",
     "@medusajs/cache-inmemory": "^1.8.9",
     "@medusajs/cache-redis": "^1.9.0",
