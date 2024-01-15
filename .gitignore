@@ -11,6 +11,7 @@ yarn-error.log
 ../google-ads/
 db_backups/
 
+!.npmrc
 .idea
 
 coverage
