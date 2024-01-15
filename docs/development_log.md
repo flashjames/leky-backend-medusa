@@ -277,3 +277,15 @@ TAILSCALE_HOSTNAME be set according to which enviroment we're in
 Setup private npm repository for medusa-plugin-algolia
 and fix so railway can access it see:
 https://www.answeroverflow.com/m/1119291296469762098#solution-1159874695454281831
+
+# Next task:
+- Figure out how to get leky-backend-medusa to run on railway
+Didnt get chance to test if it get's the package @flashjames/medusa-plugin-algolia
+from my private github repo and if the content of that package can actually be run.
+
+From railway build log, possibly something is wrong here
+"#20 2.066 > @flashjames/medusa-plugin-algolia@5.0.5 build
+#20 2.659 > @flashjames/medusa-plugin-algolia@5.0.5 clean
+#20 3.392 > @flashjames/medusa-plugin-algolia@5.0.5 build:server
+#20 4.084 > @flashjames/medusa-plugin-algolia@5.0.5 clean
+#20 10.42 > @flashjames/medusa-plugin-algolia@5.0.5 build:admin"
