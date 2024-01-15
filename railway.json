@@ -9,7 +9,7 @@
           "dependsOn": ["setup"],
           "cmds": [
             "npm config set //npm.pkg.github.com/:_authToken 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",
-            "npm config set @flashjames:registry https://npm.pkg.github.com/",
+            "npm config set @flashjames:registry https://npm.pkg.github.com/"
           ]
         },
         "installPlugins": {
