@@ -28,7 +28,7 @@ aptPkgs = ["wget"]   # Install the wget package with apt-get
 [phases.setupTailScale]
 cmds = ["wget https://pkgs.tailscale.com/stable/tailscale_latest_amd64.tgz", "tar xzf tailscale_latest_amd64.tgz --strip-components=1", "mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale"]
 
-[phases.install]
+[phases.installPlugins]
 cacheDirectories = ['node_modules/.cache']
 cmd=['yarn install @flashjames/medusa-plugin-algolia']
 
