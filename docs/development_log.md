@@ -291,6 +291,9 @@ From railway build log, possibly something is wrong here
 #20 10.42 > @flashjames/medusa-plugin-algolia@5.0.5 build:admin"
 
 
-# Next task
+# [FINISHED] Next task, 15th jan
 Publish my medusa-plugin-algolia as a public package
 on npm.js (I dont have any sensitive code in it)
+
+# Next task, [from session 1, 16th of jan]
+Understand why railway deployment almost starts, but then gives errors.
