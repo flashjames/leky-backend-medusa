@@ -289,3 +289,8 @@ From railway build log, possibly something is wrong here
 #20 3.392 > @flashjames/medusa-plugin-algolia@5.0.5 build:server
 #20 4.084 > @flashjames/medusa-plugin-algolia@5.0.5 clean
 #20 10.42 > @flashjames/medusa-plugin-algolia@5.0.5 build:admin"
+
+
+# Next task
+Publish my medusa-plugin-algolia as a public package
+on npm.js (I dont have any sensitive code in it)

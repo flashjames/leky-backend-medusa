@@ -11,6 +11,7 @@ yarn-error.log
 ../google-ads/
 db_backups/
 
+docs/github_api.md
 !.npmrc
 .idea
 

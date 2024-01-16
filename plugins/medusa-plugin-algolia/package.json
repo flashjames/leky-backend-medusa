@@ -1,9 +1,6 @@
 {
   "name": "@flashjames/medusa-plugin-algolia",
-  "version": "5.2.12",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "version": "2.0.1",
   "description": "Algolia search plugin for Medusa",
   "repository": {
     "url": "git+https://github.com/flashjames/leky-backend-medusa.git"
@@ -14,6 +11,7 @@
   "author": "Medusa",
   "license": "MIT",
   "scripts": {
+    "publish": "npm publish --access public",
     "prepare": "cross-env NODE_ENV=production yarn run build",
     "test": "jest --passWithNoTests src",
     "build": "yarn build2 && cp -R dist/* .",
