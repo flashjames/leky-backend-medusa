@@ -301,3 +301,10 @@ Understand why railway deployment almost starts, but then gives errors.
 - Clues:
   - it seems like @flashjames/medusa-plugin-algolia is not added in dist/
   -
+
+
+utils_1.SearchUtils.isSearchService is not a function
+https://github.com/medusajs/medusa/issues/6070
+
+to upgraded:
+ - @flashjames/medusa-plugin-algolia
