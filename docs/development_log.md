@@ -297,3 +297,7 @@ on npm.js (I dont have any sensitive code in it)
 
 # Next task, [from session 1, 16th of jan]
 Understand why railway deployment almost starts, but then gives errors.
+
+- Clues:
+  - it seems like @flashjames/medusa-plugin-algolia is not added in dist/
+  -
