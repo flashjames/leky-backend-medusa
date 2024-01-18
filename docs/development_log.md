@@ -308,3 +308,9 @@ https://github.com/medusajs/medusa/issues/6070
 
 to upgraded:
  - @flashjames/medusa-plugin-algolia
+
+ # Next task:
+ - Fix cors error in frontend that is completly determined that it is a problem on the backend-server on vercel. I have the local frontend connected to the backend at https://api.leky.hr and it still gives same exact error.
+ The packets sent to backend indicates (and when it get's the packet back the body "is not shown")
+ - The error message in console:
+ "Response body is not available to scripts (Reason: CORS Missing Allow Origin)"
