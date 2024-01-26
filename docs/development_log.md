@@ -314,3 +314,13 @@ to upgraded:
  The packets sent to backend indicates (and when it get's the packet back the body "is not shown")
  - The error message in console:
  "Response body is not available to scripts (Reason: CORS Missing Allow Origin)"
+
+
+# Next task (to 19th jan, from 18th jan):
+  - Försöka få cors problemet att försvinna, har precis fått till så att det går att köra dev servern i terminalen (4 st startade) - och att storefronten kommer åt den på den (api.leky.hr)
+
+Bästa länken om varför cors preflight behövs: https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe
+
+# session 1
+- fått det att funnka med storefront localhost mot backend på railway (api.leky.hr)
+men produktion vercel (by-q-store....vercel.app) ger cors errors i webbläsaren.
