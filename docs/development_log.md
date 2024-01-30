@@ -324,3 +324,22 @@ Bästa länken om varför cors preflight behövs: https://stackoverflow.com/ques
 # session 1
 - fått det att funnka med storefront localhost mot backend på railway (api.leky.hr)
 men produktion vercel (by-q-store....vercel.app) ger cors errors i webbläsaren.
+
+så det bästa skulle vara om jag ku
+
+# avslutande session 26e januari
+fick https://byq-storefront-medusa.vercel.app/ (vercel production) att funka med cors, oklart exakt vad det var som löste det.
+
+-- funkar tydligen inte igen..
+
+
+## Första session jan 30 - HUR FÅ CORS ATT FUNKA
+Om jag startar på railway med:
+- ./start_sleep.sh
+- ssh:ar in, lägger in lokala ~/byq/backend-medusa/.env.prod på den
+- startar med yarn dev via ssh
+=> Då funkar CORS på https://byq-storefront-medusa.vercel.app/
+
+TODO next:
+- Duplikera prod databas till staging, railway
+- Börja förstå varför cors inte funkar när railway startar medusa (dvs inte via ssh)
