@@ -23,7 +23,7 @@
     "start": "cross-env npm run build && medusa start",
     "start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
     "dev": "cross-env npm run build:server && medusa develop",
-    "start-production": "medusa migrations run && pm2 start pm2.config.js --no-daemon"
+    "start-production": "medusa migrations run && pm2 start npm --no-daemon --name 'leky-backend-medusa' -i max -- run start"
   },
   "dependencies": {
     "@flashjames/medusa-plugin-algolia": "^2.0.1",
