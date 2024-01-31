@@ -9,7 +9,6 @@ import type {
 const allowedOrigin = (hostUrl) => {
   const STORE_CORS = process.env.STORE_CORS
   let storeCorsUrls = STORE_CORS.split(",")
-  console.log(hostUrl, storeCorsUrls, "storeCorsUrls")
   for(var url of storeCorsUrls) {
     if(url.includes(hostUrl)) {
       return true
@@ -18,20 +17,18 @@ const allowedOrigin = (hostUrl) => {
   return false
 }
 
-let i = 0
 async function logger(
   req: MedusaRequest,
   res: MedusaResponse,
   next: MedusaNextFunction
 ) {
   /*
-  TODO: Change to right url (["https://byq-storefront-medusa.vercel.app"])
-  - Hacky, check url that the response was from and set the url to it (compare to the allowed origins)
-  - Less hacky: Check allowed origins from enviroment variable
+  TODO:
+  Remove this code, i.e. solve the original error.
+  Which is that origin wont work on railway if this code is not here
    */
 
-
-    const hostUrl = req.get('origin')
+  const hostUrl = req.get('origin')
   const isAllowedOrigin = allowedOrigin(hostUrl)
 
   if(isAllowedOrigin) {
