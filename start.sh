@@ -6,11 +6,6 @@ do
     sleep 0.1
 done
 
-npx medusa migrations run && npx medusa start
+npx medusa migrations run && npx pm2 start pm2.config.js --no-daemon
 
 sleep infinity
-
-# Time-stamp: <>
-#
-# --------------------------------------------------------------------
-# Project            :

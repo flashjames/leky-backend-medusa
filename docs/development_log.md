@@ -341,5 +341,10 @@ Om jag startar på railway med:
 => Då funkar CORS på https://byq-storefront-medusa.vercel.app/
 
 TODO next:
-- Duplikera prod databas till staging, railway
+- Duplikera prod databas till staging, railway [Done]
 - Börja förstå varför cors inte funkar när railway startar medusa (dvs inte via ssh)
+
+# Next session
+!! Lägg .env i git repot och bygg på railway, kanske det funkar då???
+Börja förstå varför cors inte funkar när railway startar medusa (dvs inte via ssh)
+första att göra: !!Starta staging
