@@ -354,3 +354,11 @@ Klar med cors problemet
 - Fixa så jag kan komma åt admin delen på admin.leky.hr
 
 # FEB 1
+
+Algolia: När jag byter search index för sortering, till exempel från Most sold (default) till Name A-Z - så förändras inte ordningen på produkterna
+
+Första item Most sold:
+Object { id: "prod_01HK7YATT6PSBS3S5XNJ696H12",  … }
+
+Första item Name A-Z:
+Object { id: "prod_01HK7YATT6PSBS3S5XNJ696H12", created_at: "2024-01-03T15:16:08.118Z", updated_at: "2024-01-03T15:16:08.118Z", … }
