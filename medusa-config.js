@@ -151,7 +151,7 @@ const plugins = [
       serve: true,
       autoRebuild: true,
       develop: {
-        open: process.env.OPEN_BROWSER !== "true",
+        open: false,
       },
     },
   },

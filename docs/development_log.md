@@ -348,3 +348,9 @@ TODO next:
 !! Lägg .env i git repot och bygg på railway, kanske det funkar då???
 Börja förstå varför cors inte funkar när railway startar medusa (dvs inte via ssh)
 första att göra: !!Starta staging
+
+Klar med cors problemet
+
+- Fixa så jag kan komma åt admin delen på admin.leky.hr
+
+# FEB 1
