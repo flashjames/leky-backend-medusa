@@ -355,6 +355,7 @@ Klar med cors problemet
 
 # FEB 1
 
+
 Algolia: När jag byter search index för sortering, till exempel från Most sold (default) till Name A-Z - så förändras inte ordningen på produkterna
 
 Första item Most sold:
@@ -362,3 +363,7 @@ Object { id: "prod_01HK7YATT6PSBS3S5XNJ696H12",  … }
 
 Första item Name A-Z:
 Object { id: "prod_01HK7YATT6PSBS3S5XNJ696H12", created_at: "2024-01-03T15:16:08.118Z", updated_at: "2024-01-03T15:16:08.118Z", … }
+
+
+# Next task:
+- Add changes in backend_medusa/scripts_own/algolia.js for the remaining two items in trello card https://trello.com/c/8JYdV1Nv

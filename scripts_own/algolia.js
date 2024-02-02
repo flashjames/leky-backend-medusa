@@ -1,4 +1,6 @@
-// Default version (all methods)
+import algoliaConfig from '../algoliaConfig.js';
+const {attributesForFaceting, replicas} = algoliaConfig;
+
 import algoliasearch from 'algoliasearch';
 import path from "path";
 import dotenv from "dotenv";
@@ -20,10 +22,14 @@ const setSortorder = (index, customRanking) => {
     ],
     'relevancyStrictness': 0
   }).then(() => {
-    console.log("done")
+    console.log("done setSortorderForReplicas")
   });
 
 }
+
+
+
+
 
 const setSortorderForReplicas = () => {
   var replicaIndex = client.initIndex('products_name_asc');
@@ -43,4 +49,29 @@ const setSortorderForReplicas = () => {
   setSortorder(replicaIndex, "desc(created_at)")
 
 }
-setSortorderForReplicas()
+
+
+
+/*
+   This probably only need to be done for main index ('products')
+   and not for the virtual replicas - since this seems to be synced to them anyways
+*/
+const setAttributesForFaceting = () => {
+  const indexes = [
+    "products",
+    ...replicas
+
+  ]
+  for(var [i, replicaName] of indexes.entries()) {
+    var index = client.initIndex(replicaName);
+    index.setSettings({
+      attributesForFaceting: attributesForFaceting,
+    }).then(() => {
+      console.log("done setAttributesForFaceting")
+    });
+  }
+}
+
+
+//setSortorderForReplicas()
+//setAttributesForFaceting()
