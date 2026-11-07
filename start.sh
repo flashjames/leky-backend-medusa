@@ -6,6 +6,6 @@ do
     sleep 0.1
 done
 
-npx medusa migrations run && npx pm2 start npm --no-daemon --name 'leky-backend-medusa' -- run start
+npx medusa build && npx medusa db:migrate && npx medusa start
 
 sleep infinity
