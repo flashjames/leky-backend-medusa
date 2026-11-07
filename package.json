@@ -29,7 +29,7 @@
     "@emotion/react": "^11.14.0",
     "@flashjames/medusa-plugin-algolia": "^2.0.1",
     "@medusajs/admin-sdk": "^2.0.0",
-    "@medusajs/medusa": "^2.0.3",
+    "@medusajs/medusa": "^2.0.4",
     "algoliasearch": "^4.27.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
