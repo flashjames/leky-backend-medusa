@@ -1,27 +1,26 @@
-import type { MedusaRequest, MedusaResponse } from "@medusajs/framework/http";
+import type { MedusaRequest, MedusaResponse } from "@medusajs/medusa";
+import { EntityManager } from "typeorm";
+
+import OnboardingService from "../../../services/onboarding";
 
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
-  const onboardingModule = req.scope.resolve("onboarding");
+  const onboardingService: OnboardingService =
+    req.scope.resolve("onboardingService");
 
-  const [status] = await onboardingModule.listOnboardingStates(
-    {},
-    { take: 1 }
-  );
+  const status = await onboardingService.retrieve();
 
   res.status(200).json({ status });
 }
 
 export async function POST(req: MedusaRequest, res: MedusaResponse) {
-  const onboardingModule = req.scope.resolve("onboarding");
+  const onboardingService: OnboardingService =
+    req.scope.resolve("onboardingService");
+  const manager: EntityManager = req.scope.resolve("manager");
 
-  const [existing] = await onboardingModule.listOnboardingStates(
-    {},
-    { take: 1 }
-  );
-
-  const [status] = await onboardingModule.updateOnboardingStates({
-    selector: { id: existing.id },
-    data: req.body as Record<string, unknown>,
+  const status = await manager.transaction(async (transactionManager) => {
+    return await onboardingService
+      .withTransaction(transactionManager)
+      .update(req.body);
   });
 
   res.status(200).json({ status });

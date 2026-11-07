@@ -1,43 +1,49 @@
-import { defineMiddlewares } from "@medusajs/framework/http";
 import type {
+  MiddlewaresConfig,
   MedusaRequest,
   MedusaResponse,
   MedusaNextFunction,
-} from "@medusajs/framework/http";
+} from "@medusajs/medusa";
 
-const allowedOrigin = (hostUrl: string) => {
-  const STORE_CORS = process.env.STORE_CORS;
-  if (!STORE_CORS) return false;
-  const storeCorsUrls = STORE_CORS.split(",");
-  for (const url of storeCorsUrls) {
-    if (url.includes(hostUrl)) {
-      return true;
+
+const allowedOrigin = (hostUrl) => {
+  const STORE_CORS = process.env.STORE_CORS
+  let storeCorsUrls = STORE_CORS.split(",")
+  for(var url of storeCorsUrls) {
+    if(url.includes(hostUrl)) {
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 
-async function corsMiddleware(
+async function logger(
   req: MedusaRequest,
   res: MedusaResponse,
   next: MedusaNextFunction
 ) {
-  const hostUrl = req.get("origin");
-  if (hostUrl && allowedOrigin(hostUrl)) {
-    res.setHeader("Access-Control-Allow-Origin", hostUrl);
+  /*
+  TODO:
+  Remove this code, i.e. solve the original error.
+  Which is that origin wont work on railway if this code is not here
+   */
+
+  const hostUrl = req.get('origin')
+  const isAllowedOrigin = allowedOrigin(hostUrl)
+
+  if(isAllowedOrigin) {
+    const allowedOriginUrl = req.protocol + hostUrl
+    res.header("Access-Control-Allow-Origin", [allowedOriginUrl])
   }
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://byq-storefront-medusa.vercel.app"
-  );
+  res.header("Access-Control-Allow-Origin", ["https://byq-storefront-medusa.vercel.app"])
   next();
 }
 
-export default defineMiddlewares({
+export const config: MiddlewaresConfig = {
   routes: [
     {
-      matcher: "/store/*",
-      middlewares: [corsMiddleware],
+      matcher: "/store/",
+      middlewares: [logger],
     },
   ],
-});
+};
