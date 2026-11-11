@@ -17,27 +17,32 @@ module.exports = defineConfig({
   modules: [
     {
       resolve: "@medusajs/medusa/event-bus-redis",
+      key: "event_bus",
       options: {
         redisUrl: process.env.REDIS_URL,
       },
     },
     {
       resolve: "@medusajs/medusa/cache-redis",
+      key: "cache",
       options: {
         redisUrl: process.env.REDIS_URL,
       },
     },
     {
       resolve: "@medusajs/medusa/file-local",
+      key: "file",
       options: {
         upload_dir: "uploads",
       },
     },
     {
       resolve: "@medusajs/medusa/fulfillment-manual",
+      key: "fulfillment",
     },
     {
       resolve: "./src/modules/onboarding",
+      key: "onboarding",
     },
   ],
   plugins: [],
