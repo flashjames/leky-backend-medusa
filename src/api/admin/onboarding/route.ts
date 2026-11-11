@@ -1,7 +1,10 @@
 import type { MedusaRequest, MedusaResponse } from "@medusajs/framework/http";
+import OnboardingModuleService from "../../../modules/onboarding/service";
 
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
-  const onboardingModule = req.scope.resolve("onboarding");
+  const onboardingModule = req.scope.resolve(
+    "onboarding"
+  ) as OnboardingModuleService;
 
   const [status] = await onboardingModule.listOnboardingStates(
     {},
@@ -12,7 +15,9 @@ export async function GET(req: MedusaRequest, res: MedusaResponse) {
 }
 
 export async function POST(req: MedusaRequest, res: MedusaResponse) {
-  const onboardingModule = req.scope.resolve("onboarding");
+  const onboardingModule = req.scope.resolve(
+    "onboarding"
+  ) as OnboardingModuleService;
 
   const [existing] = await onboardingModule.listOnboardingStates(
     {},

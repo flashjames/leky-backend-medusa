@@ -5,9 +5,9 @@ import { transformProduct } from "./algolia-transform";
 export default async function handleProductChange({
   event,
   container,
-  logger,
 }: SubscriberArgs) {
-  const productId = event.data.id as string;
+  const logger = container.resolve("logger") as any;
+  const productId = (event.data as any)?.id as string;
 
   try {
     if (event.name === "product.deleted") {
