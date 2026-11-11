@@ -23,8 +23,8 @@
   "dependencies": {
     "@flashjames/medusa-plugin-algolia": "^2.0.1",
     "@medusajs/admin-sdk": "^2.0.0",
-    "@medusajs/framework": "^2.5.0",
-    "@medusajs/medusa": "^2.5.0",
+    "@medusajs/framework": "^2.6.0",
+    "@medusajs/medusa": "2.6.0",
     "algoliasearch": "^4.27.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
